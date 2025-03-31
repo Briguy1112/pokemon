@@ -7,7 +7,7 @@ let grassTimer;
 let mouse;
 let clickTimer = 10
 function preload(){
-	fightButtonImg = loadImage('buttonBattleScreen.png');
+	fightButtonImg = loadImage('assets/buttonBattleScreen.png');
 	grassTimer = 60
   mapCurrent = 3
 	mouse = new Sprite()
@@ -20,7 +20,7 @@ function preload(){
 	map[0].y=windowHeight/2
 	map[0].w=384
 	map[0].h=352
-	map[0].img = 'room1.png'
+	map[0].img = 'assets/room1.png'
 	map[0].scale = windowHeight/384
 	map[0].visible = false
 	map[0].collider = 'n'
@@ -30,7 +30,7 @@ function preload(){
 	map[1].y=windowHeight/2
 	map[1].w=384
 	map[1].h=384
-	map[1].img = 'room2_v2.png'
+	map[1].img = 'assets/room2_v2.png'
 	map[1].scale = windowHeight/384
 	map[1].visible = false
 	map[1].collider = 'n'
@@ -40,7 +40,7 @@ function preload(){
 	map[4].y=windowHeight/2
 	map[4].w=384
 	map[4].h=384
-	map[4].img = 'proffesor_oaks_lab.png'
+	map[4].img = 'assets/proffesor_oaks_lab.png'
 	map[4].scale = windowHeight/384
 	map[4].visible = false
 	map[4].collider = 'n'
@@ -50,7 +50,7 @@ function preload(){
 	map[2].y=windowHeight*10/24
 	map[2].w=1152
 	map[2].h=768
-	map[2].img = 'ballet_town.png'
+	map[2].img = 'assets/ballet_town.png'
 	map[2].scale = windowHeight/384
 	map[2].visible = false
 	map[2].collider = 'n'
@@ -61,7 +61,7 @@ function preload(){
 	map[3] = new Sprite()
 	map[3].w=384
 	map[3].h=384
-	map[3].img = 'battlemap.png'
+	map[3].img = 'assets/battlemap.png'
 	map[3].addAni('battleAni','battleMapAni.png',{frameSize:[384,384],frames:28,frameDelay:3})
 	map[3].scale = windowHeight/384
 	map[3].ani.pause()
@@ -87,10 +87,10 @@ function setup() {
 	player.rotationLock = true
 	player.friction = 0
 	player.interact = false
-	player.addAni('player_walking_right','player_walking_right.png',{frameSize:[16,16],frames:4,frameDelay:8})
-  player.addAni('player_walking_down','player_walking_down.png',{frameSize:[16,16],frames:4,frameDelay:8})
-	player.addAni('player_walking_up','player_walking_up.png',{frameSize:[16,16],frames:4,frameDelay:8})
-	player.addAni('player_idle','player_idle.png',{frameSize:[16,16],frames:2,frameDelay:1})
+	player.addAni('player_walking_right','assets/player_walking_right.png',{frameSize:[16,16],frames:4,frameDelay:8})
+    player.addAni('player_walking_down','assets/player_walking_down.png',{frameSize:[16,16],frames:4,frameDelay:8})
+	player.addAni('player_walking_up','assets/player_walking_up.png',{frameSize:[16,16],frames:4,frameDelay:8})
+	player.addAni('player_idle','assetsplayer_idle.png',{frameSize:[16,16],frames:2,frameDelay:1})
 	player.pokemon[0] = makePokemon(6,'turkey',30)
 	currentWildPokemon = new Sprite()
 	currentWildPokemon.visible = false

@@ -21,10 +21,10 @@ function makePokemon(id, name, level) {
     pokemon.types = getPokemonType(id);
 	  pokemon.isShiny = random(3) < 1;
 	  if (pokemon.isShiny) {
-  pokemon.img = `shiny${id}.png`;
+  pokemon.img = `assets/shiny${id}.png`;
 	pokemon.shiny = true
 } else {
-  pokemon.img = `${id}.png`;
+  pokemon.img = `assets/${id}.png`;
 }
     switch (id) {
         case 1:
